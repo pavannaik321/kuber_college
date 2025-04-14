@@ -1,234 +1,59 @@
-// "use client";
+'use client';
 
-// import { useEffect, useState } from "react";
-// import { motion } from "framer-motion";
-// import { FaStar, FaQuoteRight } from "react-icons/fa";
-// import Image from "next/image";
-
-// const testimonials = [
-//   {
-//     name: "Annandas Vishal",
-//     image: "/testimonials/user-male.png", // Replace with actual image
-//     review:
-//       "Our daughter has gained leadership skills at the best CBSE secondary school. We know she's prepared for higher studies.",
-//   },
-//   {
-//     name: "Rekha Shilpa Kavuluru",
-//     image: "/testimonials/user-female.png", // Replace with actual image
-//     review:
-//       "My teenager is excelling in CBSE academics at the most highly ranked secondary school. She's found her niche.",
-//   },
-//   {
-//     name: "Ramesh Kulkarni",
-//     image: "/testimonials/user-male.png", // Replace with actual image
-//     review:
-//       "Himalaya School provided an excellent foundation for my son. He is now confident and thriving in his studies.",
-//   },
-//   {
-//     name: "Priya Sharma",
-//     image: "/testimonials/user-female.png", // Replace with actual image
-//     review:
-//       "The school has nurtured my child’s creativity and confidence. We are grateful for the amazing faculty!",
-//   },
-//   {
-//     name: "Rekha Shilpa Kavuluru",
-//     image: "/testimonials/user-female.png", // Replace with actual image
-//     review:
-//       "My teenager is excelling in CBSE academics at the most highly ranked secondary school. She's found her niche.",
-//   },
-//   {
-//     name: "Ramesh Kulkarni",
-//     image: "/testimonials/user-male.png", // Replace with actual image
-//     review:
-//       "Himalaya School provided an excellent foundation for my son. He is now confident and thriving in his studies.",
-//   },
-//   {
-//     name: "Priya Sharma",
-//     image: "/testimonials/user-female.png", // Replace with actual image
-//     review:
-//       "The school has nurtured my child’s creativity and confidence. We are grateful for the amazing faculty!",
-//   },
-//   {
-//     name: "Rekha Shilpa Kavuluru",
-//     image: "/testimonials/user-female.png", // Replace with actual image
-//     review:
-//       "My teenager is excelling in CBSE academics at the most highly ranked secondary school. She's found her niche.",
-//   },
-//   {
-//     name: "Ramesh Kulkarni",
-//     image: "/testimonials/user-male.png", // Replace with actual image
-//     review:
-//       "Himalaya School provided an excellent foundation for my son. He is now confident and thriving in his studies.",
-//   },
-//   {
-//     name: "Priya Sharma",
-//     image: "/testimonials/user-female.png", // Replace with actual image
-//     review:
-//       "The school has nurtured my child’s creativity and confidence. We are grateful for the amazing faculty!",
-//   },
-// ];
-
-// export default function Testimonial() {
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
-//   // Auto-slide effect
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentIndex((prevIndex) =>
-//         prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-//       );
-//     }, 3000); // Change slide every 3 seconds
-
-//     return () => clearInterval(interval);
-//   }, []);
-
-//   return (
-//     <section className="py-16 bg-[#fdf8ed]">
-//       <div className="max-w-6xl mx-auto px-6 overflow-hidden relative">
-//         <motion.div
-//           className="flex space-x-6"
-//           animate={{ x: `-${currentIndex * 100}%` }}
-//           transition={{ ease: "easeInOut", duration: 0.8 }}
-//         >
-//           {testimonials.map((testimonial, index) => (
-//             <div
-//               key={index}
-//               className="min-w-full md:min-w-[50%] bg-white shadow-lg rounded-xl p-6 flex flex-col items-center relative transition-transform duration-500"
-//             >
-//               {/* User Image */}
-//               <Image
-//                 src={testimonial.image}
-//                 alt={testimonial.name}
-//                 width={70}
-//                 height={70}
-//                 className="rounded-full border-4 border-orange-400"
-//               />
-
-//               {/* User Name */}
-//               <h3 className="mt-3 font-semibold text-lg text-[#3f2766]">
-//                 {testimonial.name}
-//               </h3>
-
-//               {/* Quote & Stars */}
-//               <div className="flex items-center space-x-2 mt-1">
-//                 <FaQuoteRight className="text-orange-500 text-xl" />
-//               </div>
-//               <div className="flex mt-2">
-//                 {[...Array(5)].map((_, i) => (
-//                   <FaStar key={i} className="text-red-500 text-lg" />
-//                 ))}
-//               </div>
-
-//               {/* Review */}
-//               <p className="mt-3 text-gray-700 text-center italic max-w-sm">
-//                 {testimonial.review}
-//               </p>
-//             </div>
-//           ))}
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
-"use client";
-
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { FaStar, FaQuoteRight } from "react-icons/fa";
-import Image from "next/image";
-
-const testimonials = [
-  {
-    name: "Annandas Vishal",
-    image: "/testimonial/testemonial_women.png",
-    review:
-      "Our daughter has gained leadership skills at the best CBSE secondary school. We know she's prepared for higher studies.",
-  },
-  {
-    name: "Rekha Shilpa Kavuluru",
-    image: "/testimonial/men.png",
-    review:
-      "My teenager is excelling in CBSE academics at the most highly ranked secondary school. She's found her niche.",
-  },
-  {
-    name: "Ramesh Kulkarni",
-    image: "/testimonial/testemonial_women.png",
-    review:
-      "Himalaya School provided an excellent foundation for my son. He is now confident and thriving in his studies.",
-  },
-  {
-    name: "Priya Sharma",
-    image: "/testimonial/men.png",
-    review:
-      "The school has nurtured my child’s creativity and confidence. We are grateful for the amazing faculty!",
-  },
-];
-
-export default function Testimonial() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-
-  useEffect(() => {
-    if (isHovered) return; // Pause when hovered
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 3000); // Change slide every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [isHovered]);
+export default function Testimonials() {
+  const testimonials = [
+    {
+      name: 'Anjali Sharma',
+      role: 'B.Tech Student',
+      content:
+        "The faculty and facilities here are top-notch! The environment encourages innovation and learning. I'm proud to be a part of this institution.",
+      image: '/students/student1.jpeg',
+    },
+    {
+      name: 'Rahul Verma',
+      role: 'MBA Graduate',
+      content:
+        'This college helped me unlock my true potential. The support I received from the career team was incredible. Highly recommend!',
+      image: '/students/student1.jpeg',
+    },
+    {
+      name: 'Sneha Patil',
+      role: 'Engineering Alumna',
+      content:
+        'From vibrant campus life to challenging academics, my time here was transformative. The best decision I ever made.',
+      image: '/students/student1.jpeg',
+    },
+  ];
 
   return (
-    <section className="py-16 bg-[#fdf8ed] overflow-hidden">
-      <div
-        className="max-w-6xl mx-auto px-6 relative flex items-center"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <motion.div
-          className="flex"
-          animate={{ x: `-${currentIndex * 100}%` }}
-          transition={{ ease: "easeInOut", duration: 0.8 }}
-          style={{ display: "flex", width: "100%" }}
-        >
-          {[...testimonials, ...testimonials].map((testimonial, index) => (
+    <section className="bg-white text-black py-16 px-4">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-6">
+        <span className="text-slate-800">What Our</span>
+        <span className="text-red-600"> Students Say </span>
+        <span className="text-slate-800">Say</span>
+      </h2>
+        <p className="text-black mb-12 text-lg">
+          Hear from our students about their experience on campus
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((t, index) => (
             <div
               key={index}
-              className="min-w-full md:min-w-[50%] bg-white shadow-lg rounded-xl p-6 flex flex-col items-center relative mx-2"
+              className="bg-[#314863] text-white rounded-2xl p-6 shadow-lg flex flex-col items-center"
             >
-              {/* User Image */}
-              <Image
-                src={testimonial.image}
-                alt={testimonial.name}
-                width={70}
-                height={70}
-                className="rounded-full border-4 border-orange-400"
+              <img
+                src={t.image}
+                alt={t.name}
+                className="w-20 h-20 rounded-full object-cover mb-4 shadow-md"
               />
-
-              {/* User Name */}
-              <h3 className="mt-3 font-semibold text-lg text-[#3f2766]">
-                {testimonial.name}
-              </h3>
-
-              {/* Quote & Stars */}
-              <div className="flex items-center space-x-2 mt-1">
-                <FaQuoteRight className="text-orange-500 text-xl" />
-              </div>
-              <div className="flex mt-2">
-                {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} className="text-red-500 text-lg" />
-                ))}
-              </div>
-
-              {/* Review */}
-              <p className="mt-3 text-gray-700 text-center italic max-w-sm">
-                {testimonial.review}
-              </p>
+              <p className="italic text-sm mb-4">{t.content}</p>
+              <h3 className="font-semibold text-lg">{t.name}</h3>
+              <span className="text-sm text-white">{t.role}</span>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

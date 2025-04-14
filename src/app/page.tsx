@@ -8,6 +8,9 @@ import About from '@/components/aboutus'
 import StatsSection from '@/components/StatsSection'
 import VCDesk from '@/components/collegedesk'
 import Footer from '@/components/footer'
+import CampusGlimpses from '@/components/CampusGlimpses'
+import AdmissionForm from '@/components/form'
+import Testimonials from '@/components/testimonial'
 // import Image from 'next/image'
 
 export default function Home() {
@@ -127,6 +130,9 @@ export default function Home() {
       <StatsSection />
       <About />
       <VCDesk />
+      <Testimonials />
+      <AdmissionForm />
+      <CampusGlimpses />
       <Footer />
     </div>
   )
