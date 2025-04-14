@@ -47,7 +47,6 @@ export default function Home() {
    
    <div>
 
-   
       {/* Portal links */}
       <div className="flex justify-center items-center gap-6 text-[#1a3c5a] font-semibold text-base py-4">
         <div className="flex items-center gap-2 cursor-pointer">

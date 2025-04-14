@@ -2,6 +2,8 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import { Typewriter } from 'react-simple-typewriter';
+import { FaCalendarAlt, FaExternalLinkAlt, FaNewspaper } from 'react-icons/fa';
 
 interface FormData {
   firstName: string;
@@ -39,7 +41,60 @@ export default function Contactus() {
 
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
-      <Header />
+      <div className="bg-gradient-to-b from-[#d8e4ee] to-white text-gray-900 pb-6">
+
+            <div className="max-w-7xl mx-auto px-6 flex justify-end">
+            <Header />
+            </div>
+          <main className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-8">
+                      {/* Logo & School Name */}
+              <div className="flex flex-col justify-between">
+                <img src="/school_logo.png" alt="School Logo" className="h-15" />
+                {/* <span className="text-lg font-bold text-green-900">DELHI WORLD SCHOOL</span> */}
+              </div>
+         
+         <div>
+      
+            {/* Portal links */}
+            <div className="flex justify-center items-center gap-6 text-[#1a3c5a] font-semibold text-base py-4">
+              <div className="flex items-center gap-2 cursor-pointer">
+                <FaCalendarAlt /> <span>Admission Updates</span>
+              </div>
+              <div className="border-l border-gray-400 h-6" />
+              <div className="flex items-center gap-2 cursor-pointer">
+                <FaNewspaper /> <span>Latest News</span>
+              </div>
+              <div className="border-l border-gray-400 h-6" />
+              <div className="flex items-center gap-2 cursor-pointer">
+                <FaExternalLinkAlt /> <span>MBM IUMS Portal</span>
+              </div>
+            </div>
+      
+            {/* Logo + Welcome text */}
+            <div className="text-end">
+              <h1 className="text-5xl font-bold">
+                <span className="text-red-600">CONTACT</span>{' '}
+                <span className="text-[#1e2a39]">INFORMATION</span>
+              </h1>
+              <p className="text-xl mt-2 font-semibold text-[#1e2a39]">
+                WELCOME TO{' '}
+                <span className="text-red-600">
+                  <Typewriter
+                    words={['LEGACY', 'FUTURE', 'HIMALAYA COLLEGE']}
+                    loop={true}
+                    cursor
+                    cursorStyle=""
+                    typeSpeed={100}
+                    deleteSpeed={80}
+                    delaySpeed={2000}
+                  />
+                </span>
+              </p>
+            </div>
+          </div>
+          </main>
+      </div>
+      {/* <Header /> */}
       <main className="flex-grow container mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-gray-800 mb-4">Need Help? Contact Us</h2>
@@ -95,7 +150,7 @@ export default function Contactus() {
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-green-800 hover:bg-green-800 text-white font-semibold py-3 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-green-800 focus:ring-offset-2"
+              className="w-full bg-[#243b58] hover:bg-[#243b58] text-white font-semibold py-3 rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-green-800 focus:ring-offset-2"
             >
               {loading ? 'Submitting...' : 'Submit'}
             </button>
@@ -111,7 +166,7 @@ export default function Contactus() {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0410799818246!2d79.15335867546062!3d12.969223187345916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad479f0ccbe067%3A0xfef222e5f36ecdeb!2sVellore%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1741261673376!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.951501382171!2d74.30098667487383!3d14.658693785834576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaf905fcf5cdb118f%3A0xd35c425527aec9a5!2sKuber%20Enterprises%2C%20Ankola%20%7C%20Kuber%20Group%2C%20Ankola!5e0!3m2!1sen!2sin!4v1744657694241!5m2!1sen!2sin"
             ></iframe>
           </div>
         </div>

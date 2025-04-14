@@ -36,7 +36,7 @@ export default function Header() {
             </Link>
             <ul className="absolute left-0 bg-[#314863] shadow-lg rounded-md hidden group-hover:block py-2 w-48">
               <li>
-                <Link href="#" className="block px-4 py-2">
+                <Link href="/aboutus/History" className="block px-4 py-2">
                 History
                 </Link>
               </li>
@@ -45,10 +45,10 @@ export default function Header() {
                 Facilities
                 </Link>
               </li>
-              <li><Link href="#" className="block px-4 py-2">Why Himalaya</Link></li>
-              <li><Link href="#" className="block px-4 py-2">Chairman</Link></li>
-              <li><Link href="#" className="block px-4 py-2">Board of Management</Link></li>
-              <li><Link href="#" className="block px-4 py-2">Vission & Misssion</Link></li>
+              <li><Link href="/aboutus/WhyHimalaya" className="block px-4 py-2">Why Himalaya</Link></li>
+              <li><Link href="/aboutus/Chairman" className="block px-4 py-2">Chairman</Link></li>
+              <li><Link href="/aboutus/BoardManagement" className="block px-4 py-2">Board of Management</Link></li>
+              <li><Link href="/aboutus/VissionMission" className="block px-4 py-2">Vission & Misssion</Link></li>
             </ul>
           </li>
 
@@ -92,7 +92,7 @@ export default function Header() {
             </ul>
           </li>
 
-          <li><Link href="#" className="">Contact Us</Link></li>
+          <li><Link href="/contactus" className="">Contact Us</Link></li>
         </ul>
 
         {/* Mobile Menu Button */}

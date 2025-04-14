@@ -45,7 +45,7 @@ export default function Footer() {
         {/* Contact Details */}
         <div>
           <h3 className="text-xl font-bold text-white">Contact Details</h3>
-          <p className="mt-3 text-gray-300">himalayaschool107@gmail.com</p>
+          <p className="mt-3 text-gray-300">himalayacollegeankola@gmail.com</p>
           <p className="mt-2 text-gray-300">Poojageri, Ankola, Uttara Kannada - 581314, Karnataka, India</p>
           <p className="mt-2 text-gray-300">08388-295633</p>
         </div>
