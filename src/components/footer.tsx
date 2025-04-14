@@ -4,7 +4,7 @@ import { FaFacebookF, FaGithub, FaTwitter, FaDribbble, FaPinterestP } from "reac
 
 export default function Footer() {
   return (
-    <footer className="bg-green-900 text-gray-200 py-12">
+    <footer className="bg-[#314863] text-gray-200 py-12">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
         
         {/* About Section */}
@@ -23,7 +23,7 @@ export default function Footer() {
               { icon: FaDribbble, link: "#" },
               { icon: FaPinterestP, link: "#" }
             ].map(({ icon: Icon, link }, index) => (
-              <a key={index} href={link} className="p-3 bg-green-800 rounded-lg hover:bg-green-600 transition">
+              <a key={index} href={link} className="p-3 border-2 border-amber-50 rounded-lg hover:bg-green-600 transition">
                 <Icon className="text-white text-lg" />
               </a>
             ))}

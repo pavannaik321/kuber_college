@@ -38,7 +38,7 @@ const StatBox = ({ img, target, label }: { img: string; target: number; label: s
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex items-center bg-green-900 text-white px-6 py-4 rounded-lg border border-dashed border-white w-48 sm:w-56 space-x-4"
+      className="flex items-center bg-[#243b58] text-white px-6 py-4 rounded-lg border border-dashed border-white w-48 sm:w-56 space-x-4"
     >
       <div className="w-12 h-12">
         <Image src={img} alt={label} width={48} height={48} />
@@ -53,7 +53,7 @@ const StatBox = ({ img, target, label }: { img: string; target: number; label: s
 
 export default function StatsSection() {
   return (
-    <div className="bg-green-900 py-10 flex flex-wrap justify-center gap-6 text-center">
+    <div className="bg-[#243b58] py-10 flex flex-wrap justify-center gap-6 text-center">
       {stats.map((stat, index) => (
         <StatBox key={index} img={stat.img} target={stat.target} label={stat.label} />
       ))}
