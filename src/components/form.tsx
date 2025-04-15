@@ -3,26 +3,58 @@
 import { useState } from 'react';
 
 export default function AdmissionForm() {
-  const [formData, setFormData] = useState({
+  type CourseType = 'PUC' | 'BCA';
+
+  
+  const [formData, setFormData] = useState<{
+    firstName: string;
+    lastName: string;
+    course: CourseType;
+    class: string;
+    dob: string;
+    gender: string;
+    contact: string;
+    alternateContact: string;
+    address: string;
+  }>({
     firstName: '',
     lastName: '',
-    campus: '',
-    grade: '',
+    course: 'PUC',
+    class: '',
     dob: '',
     gender: '',
-    motherName: '',
-    motherContact: '',
-    fatherName: '',
-    fatherContact: '',
+    contact: '',
+    alternateContact: '',
     address: '',
   });
+  
+
+  const classOptions: Record<CourseType, string[]> = {
+    PUC: [
+      'PUC I Commerce',
+      'PUC II Commerce',
+      'PUC I Science',
+      'PUC II Science',
+    ],
+    BCA: ['BCA I', 'BCA II', 'BCA III'],
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  
+    if (name === 'course') {
+      setFormData({
+        ...formData,
+        course: value as CourseType, // 👈 assert the type here
+        class: '',
+      });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
   };
+  
 
   return (
     <div className="min-h-[80vh] w-full bg-[#314863] text-white py-8 px-4">
@@ -56,69 +88,69 @@ export default function AdmissionForm() {
             />
           </div>
 
-          {/* Campus */}
+          {/* Course */}
           <div>
-  <label className="block text-sm font-medium">Select Campus</label>
-  <div className="relative mt-1">
-    <select
-      name="campus"
-      value={formData.campus}
-      onChange={handleChange}
-      className="appearance-none w-full p-2 pr-10 border rounded-md bg-white text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#314863]"
-    >
-      <option value="">Select Campus</option>
-      <option value="North">North Campus</option>
-      <option value="South">South Campus</option>
-    </select>
-    <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center">
-      <svg
-        className="w-4 h-4 text-gray-500"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path
-          fillRule="evenodd"
-          d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
-          clipRule="evenodd"
-        />
-      </svg>
-    </div>
-  </div>
-</div>
+            <label className="block text-sm font-medium">Select Course *</label>
+            <div className="relative mt-1">
+              <select
+                name="course"
+                value={formData.course}
+                onChange={handleChange}
+                className="appearance-none w-full p-2 pr-10 border rounded-md bg-white text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#314863]"
+              >
+                <option value="PUC">PUC</option>
+                <option value="BCA">BCA</option>
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center">
+                <svg
+                  className="w-4 h-4 text-gray-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
 
-
-{/* Grade */}
-<div>
-  <label className="block text-sm font-medium">Select Grade *</label>
-  <div className="relative mt-1">
-    <select
-      name="grade"
-      value={formData.grade}
-      onChange={handleChange}
-      className="appearance-none w-full p-2 pr-10 border rounded-md bg-white text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#314863]"
-    >
-      <option value="">Select Grade</option>
-      <option value="Grade 1">Grade 1</option>
-      <option value="Grade 2">Grade 2</option>
-    </select>
-    <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center">
-      <svg
-        className="w-4 h-4 text-gray-500"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path
-          fillRule="evenodd"
-          d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
-          clipRule="evenodd"
-        />
-      </svg>
-    </div>
-  </div>
-</div>
-
+          {/* Class */}
+          <div>
+            <label className="block text-sm font-medium">Select Class *</label>
+            <div className="relative mt-1">
+              <select
+                name="class"
+                value={formData.class}
+                onChange={handleChange}
+                className="appearance-none w-full p-2 pr-10 border rounded-md bg-white text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#314863]"
+              >
+                <option value="">Select Class</option>
+                {classOptions[formData.course].map((cls) => (
+                  <option key={cls} value={cls}>
+                    {cls}
+                  </option>
+                ))}
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center">
+                <svg
+                  className="w-4 h-4 text-gray-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
 
           {/* DOB */}
           <div>
@@ -161,49 +193,25 @@ export default function AdmissionForm() {
             </div>
           </div>
 
-          {/* Mother Name */}
+          {/* Contact */}
           <div>
-            <label className="block text-sm font-medium">Mothers Name</label>
+            <label className="block text-sm font-medium">Contact No. *</label>
             <input
               type="text"
-              name="motherName"
-              value={formData.motherName}
+              name="contact"
+              value={formData.contact}
               onChange={handleChange}
               className="mt-1 w-full p-2 border rounded-md text-sm"
             />
           </div>
 
-          {/* Mother Contact */}
+          {/* Alternate Contact */}
           <div>
-            <label className="block text-sm font-medium">Mothers Contact No.</label>
+            <label className="block text-sm font-medium">Alternate Contact No. *</label>
             <input
               type="text"
-              name="motherContact"
-              value={formData.motherContact}
-              onChange={handleChange}
-              className="mt-1 w-full p-2 border rounded-md text-sm"
-            />
-          </div>
-
-          {/* Father Name */}
-          <div>
-            <label className="block text-sm font-medium">Fathers Name</label>
-            <input
-              type="text"
-              name="fatherName"
-              value={formData.fatherName}
-              onChange={handleChange}
-              className="mt-1 w-full p-2 border rounded-md text-sm"
-            />
-          </div>
-
-          {/* Father Contact */}
-          <div>
-            <label className="block text-sm font-medium">Fathers Contact No. *</label>
-            <input
-              type="text"
-              name="fatherContact"
-              value={formData.fatherContact}
+              name="alternateContact"
+              value={formData.alternateContact}
               onChange={handleChange}
               className="mt-1 w-full p-2 border rounded-md text-sm"
             />

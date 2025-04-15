@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function About() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
       <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12 items-stretch">
         
         {/* Left: Image */}

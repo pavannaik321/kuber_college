@@ -89,7 +89,7 @@ export default function Home() {
     </div>
 
          {/* Main Content */}
-         <main className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-start gap-8">
+         <main className="max-w-7xl mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-start gap-8">
         {/* Left Section */}
         <div className="flex-1">
           <h2 className="text-3xl md:text-4xl font-bold text-[#243b58] mb-2">

@@ -166,7 +166,7 @@ export default function Contactus() {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.951501382171!2d74.30098667487383!3d14.658693785834576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaf905fcf5cdb118f%3A0xd35c425527aec9a5!2sKuber%20Enterprises%2C%20Ankola%20%7C%20Kuber%20Group%2C%20Ankola!5e0!3m2!1sen!2sin!4v1744657694241!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.324082649119!2d74.30061357384251!3d14.637535876173827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbe867b81789deb%3A0x7ee114fcbe3c944f!2sHimalaya%20College%2C%20Ankola!5e0!3m2!1sen!2sin!4v1744698602729!5m2!1sen!2sin"
             ></iframe>
           </div>
         </div>

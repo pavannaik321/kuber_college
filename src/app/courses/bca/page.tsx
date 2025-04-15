@@ -65,7 +65,7 @@ export default function BcaCources() {
             {/* Logo + Welcome text */}
             <div className="text-end">
               <h1 className="text-5xl font-bold">
-                <span className="text-red-600">PUC</span>{' '}
+                <span className="text-red-600">BCA</span>{' '}
                 <span className="text-[#1e2a39]">INFORMATION</span>
               </h1>
               <p className="text-xl mt-2 font-semibold text-[#1e2a39]">
