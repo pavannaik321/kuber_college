@@ -40,9 +40,11 @@ export default function Home() {
 
       <main className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-8">
                 {/* Logo & School Name */}
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col text-center">
           <img src="/logo_main.png" alt="School Logo" className="h-36" />
           {/* <span className="text-lg font-bold text-green-900">DELHI WORLD SCHOOL</span> */}
+          <h2 className='text-lg font-bold'>Himalaya College</h2>
+          <h2>Ankola, U.K., Karnataka</h2>
         </div>
    
    <div>
