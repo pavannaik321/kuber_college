@@ -58,7 +58,7 @@ export default function Header() {
             Courses <FaChevronDown className="ml-1 text-sm" />
             </Link>
             <ul className="absolute left-0 bg-[#314863] shadow-lg rounded-md hidden group-hover:block py-2 w-56">
-              <li><Link href="#" className="block px-4 py-2">PUC</Link></li>
+              <li><Link href="courses/puc" className="block px-4 py-2">PUC</Link></li>
               <li><Link href="#" className="block px-4 py-2">BCA</Link></li>
             
             </ul>
