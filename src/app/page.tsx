@@ -41,7 +41,7 @@ export default function Home() {
       <main className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-8">
                 {/* Logo & School Name */}
         <div className="flex flex-col justify-between">
-          <img src="/school_logo.png" alt="School Logo" className="h-15" />
+          <img src="/logo_main.png" alt="School Logo" className="h-36" />
           {/* <span className="text-lg font-bold text-green-900">DELHI WORLD SCHOOL</span> */}
         </div>
    
@@ -93,12 +93,12 @@ export default function Home() {
         {/* Left Section */}
         <div className="flex-1">
           <h2 className="text-3xl md:text-4xl font-bold text-[#243b58] mb-2">
-            Republic Day Celebration <br />
-            <span className="text-red-600">@MBM</span>
+          Welcome to Himayala <br />
+            <span className="text-red-600">College</span>
           </h2>
           <hr className="border-t border-gray-400 my-4 w-3/4" />
           <p className="text-gray-700 leading-relaxed max-w-xl">
-            Celebration of 76th National Republic Day on 26 January, 2025 was marked by exemplary parade by NCC and NSS troops followed by cultural performances by our students.
+          At HIMAYALA College, we are committed to delivering excellence in education, fostering innovation, and nurturing the leaders of tomorrow. Our institution offers a vibrant academic environment, experienced faculty, modern infrastructure, and a strong focus on holistic development.
           </p>
         </div>
 

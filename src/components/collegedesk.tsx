@@ -4,18 +4,18 @@ import React from 'react'
 export default function VCDesk() {
   const sections = [
     {
-      name: 'Prof. Ajay Kumar Sharma',
-      title: "Hon'ble Vice Chancellor",
-      university: 'MBM University',
-      location: 'Jodhpur, Rajasthan',
+      name: 'Shri M.I. Mahalea',
+      title: "Principal",
+      university: 'Himalaya PU & BCA College',
+      location: 'Poojageri, Ankola, Uttara Kannada',
       image: '/aboutus/principal.jpg',
       message: `At MBM University, we strive to keep the quality of our academics, research and innovation at priority to keep up with the pace of the technological advancement.`,
     },
     {
-      name: 'Prof. Ajay Kumar Sharma',
-      title: "Hon'ble Vice Chancellor",
-      university: 'MBM University',
-      location: 'Jodhpur, Rajasthan',
+      name: 'Shri Mayur R. Nayak',
+      title: "Chairman",
+      university: 'Himalaya Educational Trust',
+      location: 'Poojageri, Ankola, Uttara Kannada',
       image: '/aboutus/chairman.jpg',
       message: `At MBM University, we strive to keep the quality of our academics, research and innovation at priority to keep up with the pace of the technological advancement.`,
     },
